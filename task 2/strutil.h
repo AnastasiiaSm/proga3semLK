@@ -1,10 +1,3 @@
-#ifndef STRUTIL_H
-#define STRUTIL_H
+#pragma once
 
-class strutil
-{
-	public:
-	protected:
-};
-
-#endif
+int srtConteins(char* a, char* str);
