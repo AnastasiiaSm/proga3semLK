@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-1. Написать класс для работы со строками
+1. ГЌГ ГЇГЁГ±Г ГІГј ГЄГ«Г Г±Г± Г¤Г«Гї Г°Г ГЎГ®ГІГ» Г±Г® Г±ГІГ°Г®ГЄГ Г¬ГЁ
 
 class FooString {
    char* buf;
@@ -10,9 +10,9 @@ public:
    ~FooString();
    void show ();                    
 
-   bool compare(char* str);              // Вариант 3 - true – если строки равны
+   bool compare(char* str);              // Г‚Г Г°ГЁГ Г­ГІ 3 - true вЂ“ ГҐГ±Г«ГЁ Г±ГІГ°Г®ГЄГЁ Г°Г ГўГ­Г»
 
-2. Для метода по варианту написать модульный тесты, проверяющие его работу
+2. Г„Г«Гї Г¬ГҐГІГ®Г¤Г  ГЇГ® ГўГ Г°ГЁГ Г­ГІГі Г­Г ГЇГЁГ±Г ГІГј Г¬Г®Г¤ГіГ«ГјГ­Г»Г© ГІГҐГ±ГІГ», ГЇГ°Г®ГўГҐГ°ГїГѕГ№ГЁГҐ ГҐГЈГ® Г°Г ГЎГ®ГІГі
 */
 
 class FooString {
@@ -29,7 +29,8 @@ FooString::FooString(char* abuf) {
 }
 
 FooString::~FooString() {
-//нет динам. выдел. памяти
+//Г­ГҐГІ Г¤ГЁГ­Г Г¬. ГўГ»Г¤ГҐГ«. ГЇГ Г¬ГїГІГЁ
+	delete[] buf;
 }
 
 void FooString::show() {
@@ -37,7 +38,8 @@ void FooString::show() {
 	while (buf[i] != '\0') {
 		std::cout << buf[i];
 		++i;
-   }
+   	}
+	std::cout << std::endl;
 }
 
 bool FooString::compare(char* str){
@@ -52,8 +54,9 @@ bool FooString::compare(char* str){
 }
 
 void tests() {
-	FooString t('a');
-	if (t.compare('a0') ) {
+	char t[2] = "ab";
+	FooString str($a[0]);
+	if (t.compare('ab0') ) {
 		std::cout << "no errors";
 	}
 	else {
